@@ -1,105 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Security Console — dark SOC theme. All colors HSL. */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Deep slate canvas */
+    --background: 222 30% 6%;
+    --foreground: 210 30% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 28% 9%;
+    --card-foreground: 210 30% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 30% 8%;
+    --popover-foreground: 210 30% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon mint = primary brand */
+    --primary: 152 80% 55%;
+    --primary-foreground: 222 40% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222 22% 14%;
+    --secondary-foreground: 210 30% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 222 20% 12%;
+    --muted-foreground: 215 15% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 222 25% 16%;
+    --accent-foreground: 210 30% 92%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 58%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 222 22% 16%;
+    --input: 222 22% 14%;
+    --ring: 152 80% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Risk semantic tokens */
+    --risk-safe: 152 80% 55%;
+    --risk-suspect: 38 95% 60%;
+    --risk-phishing: 14 95% 62%;
+    --risk-scam: 0 85% 62%;
+    --risk-spam: 270 60% 65%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Surfaces */
+    --surface-elevated: 222 26% 11%;
+    --surface-overlay: 222 30% 7%;
+    --grid-line: 222 22% 13%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Gradients */
+    --gradient-radial: radial-gradient(circle at 20% 0%, hsl(152 80% 55% / 0.12), transparent 50%),
+                       radial-gradient(circle at 80% 100%, hsl(270 60% 65% / 0.08), transparent 50%);
+    --gradient-risk-safe: linear-gradient(135deg, hsl(152 80% 55% / 0.18), hsl(152 80% 55% / 0.02));
+    --gradient-risk-suspect: linear-gradient(135deg, hsl(38 95% 60% / 0.18), hsl(38 95% 60% / 0.02));
+    --gradient-risk-phishing: linear-gradient(135deg, hsl(14 95% 62% / 0.2), hsl(14 95% 62% / 0.02));
+    --gradient-risk-scam: linear-gradient(135deg, hsl(0 85% 62% / 0.22), hsl(0 85% 62% / 0.03));
+    --gradient-risk-spam: linear-gradient(135deg, hsl(270 60% 65% / 0.18), hsl(270 60% 65% / 0.02));
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Glows */
+    --glow-safe: 0 0 24px hsl(152 80% 55% / 0.35);
+    --glow-suspect: 0 0 24px hsl(38 95% 60% / 0.35);
+    --glow-phishing: 0 0 24px hsl(14 95% 62% / 0.4);
+    --glow-scam: 0 0 28px hsl(0 85% 62% / 0.45);
+    --glow-spam: 0 0 24px hsl(270 60% 65% / 0.35);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Shadows */
+    --shadow-panel: 0 1px 0 hsl(0 0% 100% / 0.03) inset, 0 20px 50px -20px hsl(0 0% 0% / 0.6);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Motion */
+    --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
+
+  html, body, #root { height: 100%; }
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background-image: var(--gradient-radial);
+    background-attachment: fixed;
   }
+
+  ::selection { background: hsl(var(--primary) / 0.3); }
+}
+
+@layer utilities {
+  .font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--grid-line)) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--grid-line)) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+  }
+
+  .glow-safe { box-shadow: var(--glow-safe); }
+  .glow-suspect { box-shadow: var(--glow-suspect); }
+  .glow-phishing { box-shadow: var(--glow-phishing); }
+  .glow-scam { box-shadow: var(--glow-scam); }
+  .glow-spam { box-shadow: var(--glow-spam); }
+
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+  .scanline::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent, hsl(var(--primary) / 0.18), transparent);
+    transform: translateY(-100%);
+    animation: scan 1.6s var(--ease-out-soft) infinite;
+    pointer-events: none;
+  }
+
+  @keyframes scan {
+    to { transform: translateY(100%); }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+  .pulse-dot { animation: pulse-soft 1.4s ease-in-out infinite; }
+
+  @keyframes confidence-fill {
+    from { width: 0%; }
+  }
+  .animate-fill { animation: confidence-fill 0.9s var(--ease-out-soft) both; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fade-up 0.4s var(--ease-out-soft) both; }
 }
