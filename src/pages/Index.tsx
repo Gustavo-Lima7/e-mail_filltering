@@ -180,7 +180,7 @@ const Index = () => {
   );
 
   return (
-    <div className="h-screen w-full overflow-hidden md:grid md:grid-cols-[260px_minmax(320px,400px)_1fr]">
+    <div className="h-screen w-full overflow-hidden lg:grid lg:grid-cols-[240px_minmax(300px,360px)_1fr]">
       {/* Desktop sidebar */}
       <div className="hidden md:block h-full">
         <CategorySidebar active={filter} onChange={handleFilterChange} counts={counts} />
