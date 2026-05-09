@@ -162,7 +162,7 @@ const Index = () => {
     <main className="flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden bg-background">
       {/* Mobile back bar */}
       {selected && (
-        <div className="flex items-center gap-2 border-b border-border bg-surface-overlay/70 px-3 py-2 lg:hidden">
+        <div className="flex items-center gap-2 border-b border-border bg-surface-overlay/70 px-3 py-2 nb:hidden">
           <Button size="sm" variant="ghost" className="gap-1.5 -ml-2" onClick={() => setSelectedId(null)}>
             <ArrowLeft className="h-4 w-4" /> Caixa
           </Button>
