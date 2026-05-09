@@ -192,8 +192,8 @@ const Index = () => {
       </div>
 
       {/* Desktop: list + detail */}
-      <div className="hidden lg:flex lg:h-full lg:min-h-0">{InboxColumn}</div>
-      <div className="hidden lg:flex lg:h-full lg:min-h-0">{DetailColumn}</div>
+      <div className="hidden lg:flex lg:h-full lg:min-h-0 lg:min-w-0 lg:w-full">{InboxColumn}</div>
+      <div className="hidden lg:flex lg:h-full lg:min-h-0 lg:min-w-0 lg:w-full">{DetailColumn}</div>
     </div>
   );
 };
