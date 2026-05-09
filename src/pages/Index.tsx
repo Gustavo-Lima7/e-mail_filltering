@@ -180,7 +180,7 @@ const Index = () => {
   );
 
   return (
-    <div className="h-screen w-full overflow-hidden nb:grid nb:grid-cols-[minmax(300px,360px)_1fr] xl:grid-cols-[240px_minmax(300px,360px)_1fr]">
+    <div className="h-screen w-full overflow-hidden nb:grid nb:grid-cols-2 xl:grid-cols-3">
       {/* Sidebar (only visible at xl+) */}
       <div className="hidden xl:block h-full">
         <CategorySidebar active={filter} onChange={handleFilterChange} counts={counts} />
