@@ -94,13 +94,13 @@ const Index = () => {
   };
 
   const InboxColumn = (
-    <section className="flex h-full min-h-0 flex-col bg-card/30 md:border-r md:border-border">
-      <header className="flex items-center justify-between gap-3 border-b border-border px-4 py-3 md:px-5 md:py-4">
+    <section className="flex h-full min-h-0 flex-col bg-card/30 lg:border-r lg:border-border">
+      <header className="flex items-center justify-between gap-3 border-b border-border px-4 py-3 lg:px-5 lg:py-4">
         <div className="flex min-w-0 items-center gap-2">
           {/* Mobile sidebar trigger */}
           <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
             <SheetTrigger asChild>
-              <Button size="icon" variant="ghost" className="md:hidden h-9 w-9 shrink-0">
+              <Button size="icon" variant="ghost" className="lg:hidden h-9 w-9 shrink-0">
                 <Menu className="h-4 w-4" />
               </Button>
             </SheetTrigger>
@@ -162,7 +162,7 @@ const Index = () => {
     <main className="flex h-full min-h-0 flex-col overflow-hidden bg-background">
       {/* Mobile back bar */}
       {selected && (
-        <div className="flex items-center gap-2 border-b border-border bg-surface-overlay/70 px-3 py-2 md:hidden">
+        <div className="flex items-center gap-2 border-b border-border bg-surface-overlay/70 px-3 py-2 lg:hidden">
           <Button size="sm" variant="ghost" className="gap-1.5 -ml-2" onClick={() => setSelectedId(null)}>
             <ArrowLeft className="h-4 w-4" /> Caixa
           </Button>
@@ -182,18 +182,18 @@ const Index = () => {
   return (
     <div className="h-screen w-full overflow-hidden lg:grid lg:grid-cols-[240px_minmax(300px,360px)_1fr]">
       {/* Desktop sidebar */}
-      <div className="hidden md:block h-full">
+      <div className="hidden lg:block h-full">
         <CategorySidebar active={filter} onChange={handleFilterChange} counts={counts} />
       </div>
 
       {/* Mobile: single-pane view (list OR detail) */}
-      <div className="md:hidden h-full">
+      <div className="lg:hidden h-full">
         {selected ? DetailColumn : InboxColumn}
       </div>
 
       {/* Desktop: list + detail */}
-      <div className="hidden md:flex md:h-full md:min-h-0">{InboxColumn}</div>
-      <div className="hidden md:flex md:h-full md:min-h-0">{DetailColumn}</div>
+      <div className="hidden lg:flex lg:h-full lg:min-h-0">{InboxColumn}</div>
+      <div className="hidden lg:flex lg:h-full lg:min-h-0">{DetailColumn}</div>
     </div>
   );
 };
