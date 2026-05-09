@@ -159,7 +159,7 @@ const Index = () => {
   );
 
   const DetailColumn = (
-    <main className="flex h-full min-h-0 flex-col overflow-hidden bg-background">
+    <main className="flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden bg-background">
       {/* Mobile back bar */}
       {selected && (
         <div className="flex items-center gap-2 border-b border-border bg-surface-overlay/70 px-3 py-2 lg:hidden">
