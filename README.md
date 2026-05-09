@@ -1,6 +1,6 @@
 # Email Guardian Angel
 
-Um projeto desenvolvido para gerenciamento e proteção de e-mails, focado em automação, organização e segurança no envio e tratamento de mensagens.
+Um projeto desenvolvido no lovable para gerenciamento e proteção de e-mails, focado em automação, organização e segurança no envio e tratamento de mensagens.
 
 ## Tecnologias utilizadas
 
