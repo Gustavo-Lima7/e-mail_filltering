@@ -94,13 +94,13 @@ const Index = () => {
   };
 
   const InboxColumn = (
-    <section className="flex h-full min-h-0 w-full min-w-0 flex-col bg-card/30 lg:border-r lg:border-border">
-      <header className="flex items-center justify-between gap-3 border-b border-border px-4 py-3 lg:px-5 lg:py-4">
+    <section className="flex h-full min-h-0 w-full min-w-0 flex-col bg-card/30 nb:border-r nb:border-border">
+      <header className="flex items-center justify-between gap-3 border-b border-border px-4 py-3 nb:px-5 nb:py-4">
         <div className="flex min-w-0 items-center gap-2">
-          {/* Mobile sidebar trigger */}
+          {/* Sidebar trigger (hidden when sidebar is visible at xl+) */}
           <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
             <SheetTrigger asChild>
-              <Button size="icon" variant="ghost" className="lg:hidden h-9 w-9 shrink-0">
+              <Button size="icon" variant="ghost" className="xl:hidden h-9 w-9 shrink-0">
                 <Menu className="h-4 w-4" />
               </Button>
             </SheetTrigger>
