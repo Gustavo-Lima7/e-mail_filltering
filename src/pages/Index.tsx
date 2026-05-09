@@ -94,7 +94,7 @@ const Index = () => {
   };
 
   const InboxColumn = (
-    <section className="flex h-full min-h-0 flex-col bg-card/30 lg:border-r lg:border-border">
+    <section className="flex h-full min-h-0 w-full min-w-0 flex-col bg-card/30 lg:border-r lg:border-border">
       <header className="flex items-center justify-between gap-3 border-b border-border px-4 py-3 lg:px-5 lg:py-4">
         <div className="flex min-w-0 items-center gap-2">
           {/* Mobile sidebar trigger */}
