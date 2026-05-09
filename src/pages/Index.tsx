@@ -180,20 +180,20 @@ const Index = () => {
   );
 
   return (
-    <div className="h-screen w-full overflow-hidden lg:grid lg:grid-cols-[240px_minmax(300px,360px)_1fr]">
-      {/* Desktop sidebar */}
-      <div className="hidden lg:block h-full">
+    <div className="h-screen w-full overflow-hidden nb:grid nb:grid-cols-[minmax(300px,360px)_1fr] xl:grid-cols-[240px_minmax(300px,360px)_1fr]">
+      {/* Sidebar (only visible at xl+) */}
+      <div className="hidden xl:block h-full">
         <CategorySidebar active={filter} onChange={handleFilterChange} counts={counts} />
       </div>
 
-      {/* Mobile: single-pane view (list OR detail) */}
-      <div className="lg:hidden h-full">
+      {/* Single-pane (mobile/tablet < 1000px) */}
+      <div className="nb:hidden h-full">
         {selected ? DetailColumn : InboxColumn}
       </div>
 
-      {/* Desktop: list + detail */}
-      <div className="hidden lg:flex lg:h-full lg:min-h-0 lg:min-w-0 lg:w-full">{InboxColumn}</div>
-      <div className="hidden lg:flex lg:h-full lg:min-h-0 lg:min-w-0 lg:w-full">{DetailColumn}</div>
+      {/* List + Detail (≥1000px) */}
+      <div className="hidden nb:flex nb:h-full nb:min-h-0 nb:min-w-0 nb:w-full">{InboxColumn}</div>
+      <div className="hidden nb:flex nb:h-full nb:min-h-0 nb:min-w-0 nb:w-full">{DetailColumn}</div>
     </div>
   );
 };
