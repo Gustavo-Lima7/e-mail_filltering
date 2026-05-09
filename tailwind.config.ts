@@ -10,6 +10,14 @@ export default {
       padding: "2rem",
       screens: { "2xl": "1400px" },
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      nb: "1000px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       fontFamily: {
         display: ['"Space Grotesk"', "system-ui", "sans-serif"],
