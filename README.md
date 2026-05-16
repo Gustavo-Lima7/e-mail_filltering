@@ -1,91 +1,80 @@
-# Email Guardian Angel
+Guia de Privacidade e Cuidados com Dados Pessoais
+Este repositório tem como objetivo estabelecer as diretrizes, boas práticas e políticas de segurança adotadas no projeto [Nome do Projeto] para garantir a proteção de dados pessoais e a conformidade com as leis de privacidade, como a LGPD (Lei Geral de Proteção de Dados) e a GDPR (General Data Protection Regulation).
 
-Um projeto desenvolvido no lovable para gerenciamento e proteção de e-mails, focado em automação, organização e segurança no envio e tratamento de mensagens.
+Sumário
+Por que a Privacidade de Dados Importa?
 
-## Tecnologias utilizadas
+Princípios Fundamentais
 
-- Python
-- JSON
-- SMTP / Email API
-- Automação de processos
-- Terminal/CLI
+Boas Práticas de Segurança no Desenvolvimento
 
-## Funcionalidades
+Cuidados com o Repositório (Git & GitHub)
 
-- Envio automatizado de e-mails
-- Validação de dados
-- Organização de informações em arquivos JSON
-- Estrutura simples para aprendizado
-- Fácil adaptação para novos recursos
+Direitos dos Titulares dos Dados
 
-## Estrutura do projeto
+Como Contribuir com a Segurança
 
-bash id="q2i1bh" 📦 remix-of-email-guardian-angel  ┣ 📜 main.py  ┣ 📜 dados.json  ┣ 📜 requirements.txt  ┗ 📜 README.md 
+Por que a Privacidade de Dados Importa?
+A privacidade não é apenas uma obrigação legal, mas um direito fundamental. Quando os usuários confiam seus dados ao nosso sistema, assumimos a responsabilidade de protegê-los contra acessos não autorizados, vazamentos e uso indevido.
 
-## Como executar o projeto
+Mapear o fluxo de dados e entender quais informações são coletadas é o primeiro passo para mitigar riscos.
 
-### 1. Clone o repositório
+Princípios Fundamentais
+Seguimos o conceito de Privacy by Design (Privacidade desde a Concepção), baseando o desenvolvimento nos seguintes pilares:
 
-bash id="a5x2pn" git clone https://github.com/Gustavo-Lima7/remix-of-email-guardian-angel.git 
+Minimização de Dados: Coletamos apenas o estritamente necessário para o funcionamento do serviço. Se um dado não tem uma utilidade clara, ele não deve ser solicitado.
 
-### 2. Entre na pasta do projeto
+Finalidade e Transparência: O usuário deve saber exatamente para que o seu dado será utilizado.
 
-bash id="yl85v5" cd remix-of-email-guardian-angel 
+Segurança: Implementação de medidas técnicas e administrativas para proteger os dados em todo o seu ciclo de vida (coleta, processamento, armazenamento e descarte).
 
-### 3. Instale as dependências
+Retenção Limitada: Os dados são mantidos apenas pelo tempo necessário para cumprir sua finalidade legal ou operacional.
 
-bash id="0m3x11" pip install -r requirements.txt 
+Boas Práticas de Segurança no Desenvolvimento
+Para garantir que o código e a arquitetura do projeto sejam seguros, adotamos as seguintes medidas:
 
-### 4. Execute o projeto
+1. Criptografia
+Em trânsito: Uso obrigatório de protocolos seguros (HTTPS/TLS) para qualquer comunicação de rede.
 
-bash id="x9s6z2" python main.py 
+Em repouso: Dados sensíveis armazenados em bancos de dados (como senhas e documentos) devem ser criptografados utilizando algoritmos robustos (ex: AES-256, BCrypt para senhas).
 
----
+2. Anonimização e Pseudonimização
+Sempre que dados forem utilizados para fins estatísticos, testes ou inteligência de negócio, as informações que identificam diretamente o indivíduo devem ser removidas (anonimizadas) ou mascaradas.
 
-## Objetivo do projeto
+3. Controle de Acesso (Princípio do Menor Privilégio)
+Apenas pessoas e sistemas estritamente autorizados possuem acesso às bases de dados de produção.
 
-Esse projeto foi criado com foco em aprendizado de programação, automação e manipulação de dados utilizando Python.
+Uso de autenticação multifator (MFA) em todas as contas de administração.
 
-Além disso, ele demonstra conceitos importantes como:
+Cuidados com o Repositório (Git & GitHub)
+NUNCA insira dados pessoais reais ou credenciais no histórico do Git. Para proteger o código-fonte, siga estas regras:
 
-- Manipulação de arquivos JSON
-- Estruturação de código
-- Automação de tarefas
-- Integração com sistemas de e-mail
+Uso de .gitignore: Certifique-se de que arquivos .env, configurações locais, logs e arquivos de banco de dados locais (.sqlite, .db) estejam listados no .gitignore para evitar o envio acidental ao GitHub.
 
-## Preview
+Dados de Teste (Mock Data): Para testes locais e demonstrações, utilize dados fictícios gerados por bibliotecas específicas (como Faker), nunca dados de clientes ou usuários reais.
 
-Você pode adicionar prints do sistema aqui futuramente.
+Varredura de Segredos: Utilizamos ferramentas de Secret Scanning integradas ao GitHub para detectar automaticamente chaves de API, senhas ou tokens que possam ter sido expostos por engano.
 
----
+Se você identificar que alguma credencial ou dado sensível foi enviado ao repositório, notifique a equipe imediatamente para que o histórico do Git seja limpo adequadamente (usando ferramentas como git-filter-repo ou BFG Repo-Cleaner).
 
-## Aprendizados
+Direitos dos Titulares dos Dados
+Este projeto é desenvolvido respeitando os direitos que a legislação garante aos usuários sobre seus próprios dados:
 
-Durante o desenvolvimento deste projeto foram praticados:
+Confirmação e Acesso: O usuário pode solicitar a confirmação da existência do tratamento de seus dados.
 
-- Lógica de programação
-- Estruturas condicionais
-- Funções
-- Organização de código
-- Manipulação de arquivos
-- Integração com serviços externos
+Correção: Possibilidade de retificar dados incompletos, inexatos ou desatualizados.
 
----
+Exclusão (Direito ao Esquecimento): O usuário pode solicitar a exclusão de seus dados, desde que não haja uma obrigação legal para a retention dos mesmos.
 
-## Autor
+Revogação do Consentimento: Facilidade para o usuário retirar a autorização de uso de seus dados a qualquer momento.
 
-Desenvolvido por Gustavo Lima.
+Como Contribuir com a Segurança
+Se você encontrar alguma vulnerabilidade de segurança ou uma possível exposição de dados neste repositório:
 
-GitHub: https://github.com/Gustavo-Lima7
+Não abra uma Issue pública para relatar problemas de segurança.
 
----
+Envie um e-mail detalhado para [seu-email-de-contato@dominio.com].
 
-## Contribuição
+Nossa equipe investigará e corrigirá o problema o mais rápido possível.
 
-Sinta-se livre para abrir issues, sugerir melhorias ou enviar pull requests.
-
----
-
-## Licença
-
-Este projeto está sob a licença MIT.
+Aviso: Este documento serve como um guia de boas práticas para o desenvolvimento do projeto e não substitui uma consultoria jurídica formal sobre conformidade com as leis de proteção de dados.
