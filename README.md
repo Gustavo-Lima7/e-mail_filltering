@@ -73,7 +73,7 @@ Se você encontrar alguma vulnerabilidade de segurança ou uma possível exposi�
 
 Não abra uma Issue pública para relatar problemas de segurança.
 
-Envie um e-mail detalhado para [seu-email-de-contato@dominio.com].
+Envie um e-mail detalhado para [seu-email-de-contato@dominio.com]..
 
 Nossa equipe investigará e corrigirá o problema o mais rápido possível.
 
